@@ -15,3 +15,21 @@
     scrollbar-width: none; /* Firefox */
   }
 }
+
+@layer components {
+  .grid-qr {
+    display: grid;
+    grid-template-columns: repeat(3, 104px);
+    row-gap: 16px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 32px;
+    box-sizing: border-box;
+  }
+
+  .grid-faq {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

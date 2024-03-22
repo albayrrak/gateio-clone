@@ -17,17 +17,17 @@ const EventSlider: React.FC<IProps> = ({ swiperRef }) => {
       className="h-[240px] relative"
       slidesPerView={4}
       loop
-        autoplay={{
-          delay: 1000,
-          disableOnInteraction: false,
-        }}
+      autoplay={{
+        delay: 1000,
+        disableOnInteraction: false,
+      }}
       navigation={{
         prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next",
       }}
     >
-      {SlideData.map((x) => (
-        <SwiperSlide key={x.id}>
+      {SlideData.map((x, i) => (
+        <SwiperSlide key={i}>
           <EventCard data={x} />
         </SwiperSlide>
       ))}

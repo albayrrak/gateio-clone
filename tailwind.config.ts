@@ -10,12 +10,17 @@ const config: Config = {
           secondary: "#2e384d",
           header: "rgb(12, 12, 15)",
           line: "rgb(112, 121, 140)",
+          divider: "#eef1fa",
         },
 
         blue: {
           brand1: "#2354e6",
           brand2: "rgb(26, 34, 80)",
           brand3: "#70798c",
+        },
+
+        card: {
+          color1: "#f8f9fb",
         },
 
         neutral: {

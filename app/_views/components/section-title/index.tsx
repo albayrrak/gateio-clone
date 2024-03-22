@@ -5,7 +5,7 @@ interface IProps {
   title: string;
 }
 const SectionTitle: React.FC<IProps> = ({ title }) => {
-  return <span className=" text-[40px] font-semibold">{title}</span>;
+  return <span className=" text-[48px] font-semibold">{title}</span>;
 };
 
 export default SectionTitle;
