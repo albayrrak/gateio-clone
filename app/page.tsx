@@ -1,6 +1,7 @@
 import Community from "./_views/sections/community";
 import Crypto from "./_views/sections/crypto";
 import CryptoSeller from "./_views/sections/crypto-seller";
+import CryptoToday from "./_views/sections/crypto-today";
 import Event from "./_views/sections/event";
 import Faq from "./_views/sections/faq";
 import Main from "./_views/sections/main";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <Main />
+      <CryptoToday />
       <Event />
       <Start />
       <Crypto />

@@ -7,6 +7,11 @@ import VolumeData from "./data/volume.json";
 
 import MainSlider from "./components/main-slider";
 import Container from "../../components/container";
+import { BiMessageRoundedDots } from "react-icons/bi";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import Link from "next/link";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Main = () => {
   return (
@@ -28,6 +33,69 @@ const Main = () => {
             </div>
           </div>
           <MainSlider />
+        </div>
+        <div className="flex items-center px-6 bg-card-color1 border border-black-divider rounded-[8px] h-14 ">
+          <div className="flex items-center w-full">
+            <BiMessageRoundedDots fontSize={24} />
+            <Swiper
+              modules={[Autoplay]}
+              className="h-14 w-[530px]"
+              slidesPerView={1}
+              direction="vertical"
+              loop
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+            >
+              <SwiperSlide className="h-full w-full">
+                <Link href="/" className="flex items-center h-14 text-[14px] text-black-secondary  text-nowrap text-ellipsis overflow-hidden pl-4 hover:text-blue-brand1">
+                  Gate.io Hosts Ramadan KOL Meet-up Dinner in Turkey, Enhancing Crypto Community Relations
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide className="h-full w-full">
+                <Link href="/" className="flex items-center h-14 text-[14px] text-black-secondary  text-nowrap text-ellipsis overflow-hidden pl-4 hover:text-blue-brand1">
+                  Gate.io Hosts Ramadan KOL Meet-up Dinner in Turkey, Enhancing Crypto Community Relations
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide className="h-full w-full">
+                <Link href="/" className="flex items-center h-14 text-[14px] text-black-secondary  text-nowrap text-ellipsis overflow-hidden pl-4 hover:text-blue-brand1">
+                  Gate.io Hosts Ramadan KOL Meet-up Dinner in Turkey, Enhancing Crypto Community Relations
+                </Link>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+          <div className="h-5 w-1 bg-black-divider mx-4 shrink-0"></div>
+          <div className="flex items-center w-full">
+            <Swiper
+              modules={[Autoplay]}
+              className="h-14 w-[530px]"
+              slidesPerView={1}
+              direction="vertical"
+              loop
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+            >
+              <SwiperSlide className="h-full w-full">
+                <Link href="/" className="flex items-center h-14 text-[14px] text-black-secondary  text-nowrap text-ellipsis overflow-hidden pr-4 hover:text-blue-brand1">
+                  Gate.io Hosts Ramadan KOL Meet-up Dinner in Turkey, Enhancing Crypto Community Relations
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide className="h-full w-full">
+                <Link href="/" className="flex items-center h-14 text-[14px] text-black-secondary  text-nowrap text-ellipsis overflow-hidden pr-4 hover:text-blue-brand1">
+                  Gate.io Hosts Ramadan KOL Meet-up Dinner in Turkey, Enhancing Crypto Community Relations
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide className="h-full w-full">
+                <Link href="/" className="flex items-center h-14 text-[14px] text-black-secondary  text-nowrap text-ellipsis overflow-hidden pr-4 hover:text-blue-brand1">
+                  Gate.io Hosts Ramadan KOL Meet-up Dinner in Turkey, Enhancing Crypto Community Relations
+                </Link>
+              </SwiperSlide>
+            </Swiper>
+            <GiHamburgerMenu fontSize={24} className="ml-4" />
+          </div>
         </div>
       </Container>
     </section>
