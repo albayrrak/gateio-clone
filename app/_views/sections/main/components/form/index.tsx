@@ -1,6 +1,7 @@
 import AuthButton from "@/app/_views/components/buttons/auth-button";
 import SocialButton from "@/app/_views/components/buttons/social-button";
 import React from "react";
+import { connectWithMetamask } from "@/app/_helpers/conectMetamask";
 
 const MainForm = () => {
   return (
@@ -19,7 +20,7 @@ const MainForm = () => {
       <div className="xl:w-full flex gap-3">
         <SocialButton icon={require("@/app/_assets/Google__G__logo.svg.png")} action={() => console.log("google")} />
         <SocialButton icon={require("@/app/_assets/Apple_logo_black.svg.png")} action={() => console.log("google")} />
-        <SocialButton icon={require("@/app/_assets/MetaMask_Fox.svg.png")} action={() => console.log("google")} />
+        <SocialButton icon={require("@/app/_assets/MetaMask_Fox.svg.png")} action={(e) => connectWithMetamask(e)} />
       </div>
     </form>
   );

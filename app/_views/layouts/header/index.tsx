@@ -13,6 +13,8 @@ import { BsCurrencyExchange } from "react-icons/bs";
 import { FaMoon } from "react-icons/fa";
 import { HiSun } from "react-icons/hi";
 
+import detectEthereumProvider from "@metamask/detect-provider";
+
 const Header = () => {
   const [hasScroll, setHasScroll] = useState(false);
   const [scrollBegin, setScrollBegin] = useState(false);
@@ -20,10 +22,10 @@ const Header = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [menu, setMenu] = useState(false);
 
+  const headerRef = useRef<HTMLDivElement>(null);
   const handleChange = () => {
     setIsChecked(!isChecked);
   };
-  const headerRef = useRef<HTMLDivElement>(null);
 
   const isScroll = () => {
     if (headerRef.current && headerRef.current?.scrollWidth > headerRef.current?.offsetWidth) {
@@ -52,6 +54,7 @@ const Header = () => {
       setHasScrollEnd(false);
     }
   };
+
   useEffect(() => {
     isScrollBegin();
     isScroll();
