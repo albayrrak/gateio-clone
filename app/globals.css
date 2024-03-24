@@ -119,4 +119,31 @@
     filter: blur(140px);
     top: 40%;
   }
+
+  .header-left {
+    -webkit-box-pack: start;
+    justify-content: start;
+    -webkit-box-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 100%;
+    margin-right: 52px;
+    margin-left: 0px;
+    height: 100%;
+    align-items: center;
+    position: relative;
+  }
+
+  .header-left-menu {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 100%;
+    font-size: 14px;
+    overflow: auto hidden;
+    margin-left: 16px;
+    margin-right: 0px;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
 }

@@ -4,7 +4,7 @@ import React from "react";
 interface AuthButtonProps {
   title: string;
   action?: () => void;
-  buttonType?: "register" | "small";
+  buttonType?: "register" | "small" | "header";
   buttonBg?: "primary" | "secondary";
 }
 
@@ -16,7 +16,8 @@ const AuthButton: React.FC<AuthButtonProps> = ({ title, action, buttonType, butt
         (buttonBg === "primary" ? " bg-blue-brand1 text-white " : "") +
         (buttonBg === "secondary" ? "bg-neutral-color1 text-black-primary hover:text-blue-brand1 " : "") +
         (buttonType === "register" ? " bg-blue-brand1 py-[6px] rounded-[5px] text-white " : "") +
-        (buttonType === "small" ? "px-4 h-8" : "")
+        (buttonType === "small" ? "px-4 h-8 " : "") +
+        (buttonType === "header" ? "text-white" : "")
       }
       onClick={action}
     >

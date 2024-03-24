@@ -16,9 +16,11 @@ import { GoClock } from "react-icons/go";
 
 const Startup = () => {
   const [mounted, setMounted] = useState(false);
-  const [hasScroll, setHasScroll] = useState(false);
+  const [hasScroll, setHasScroll] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentTab, setCurrentTab] = useState(0);
+  const [hasScrollBegin, setHasScrolBegin] = useState(true);
 
   useEffect(() => {
     setMounted(true);
@@ -35,14 +37,25 @@ const Startup = () => {
       }
     };
 
+    const isScrollStart = () => {
+      if (containerRef.current && containerRef.current.scrollLeft === 0) {
+        setHasScrolBegin(true);
+      }
+    };
+
+    handleResize();
+    isScrollStart();
+    containerRef.current?.addEventListener("scroll", isScrollStart);
+
     // İlk render'dan sonra ve her yeniden render'da yeniden eklenir
     window.addEventListener("resize", handleResize);
 
     // Cleanup işlevi: bileşen kaldırıldığında event listener'ı kaldırır
     return () => {
       window.removeEventListener("resize", handleResize);
+      containerRef.current?.addEventListener("scroll", isScrollStart);
     };
-  }, []); // Bağımlılıklar array'inin boş olması, sadece ilk render'da çalışmasını sağlar
+  }); // Bağımlılıklar array'inin boş olması, sadece ilk render'da çalışmasını sağlar
 
   if (!mounted) {
     return null;
@@ -52,6 +65,8 @@ const Startup = () => {
     setCurrentSlide(1200 * i);
   };
 
+  console.log(containerRef.current?.scrollLeft);
+
   return (
     <section className="w-full bg-black-startup mt-[120px] ">
       <Container>
@@ -59,7 +74,7 @@ const Startup = () => {
           <div className="relative">
             <div className="w-full relative">
               <div
-                className={` ${hasScroll ? "flex items-center justify-center" : "hidden"} absolute left-0 scroll-button-left rounded-tl-[4px] rounded-bl-[4px] top-1/2 -translate-y-1/2 z-20 h-full px-4 cursor-pointer`}
+                className={`${hasScroll ? "flex items-center justify-center" : "hidden"} absolute left-0 scroll-button-left rounded-tl-[4px] rounded-bl-[4px] top-1/2 -translate-y-1/2 z-20 h-full px-4 cursor-pointer`}
                 onClick={() => {
                   if (containerRef.current) {
                     containerRef.current.scrollLeft -= 300;
@@ -71,7 +86,13 @@ const Startup = () => {
               <div ref={containerRef} className="rounded-[4px] flex h-full w-full overflow-x-auto no-scrollbar  scroll-smooth">
                 <div className="flex flex-row justify-start relative p-1 bg-[#20232b]">
                   {TabData.map((x, i) => (
-                    <button key={i} className="text-[#fafafa] px-4 h-10 text-base font-semibold whitespace-nowrap flex items-center justify-end bg-[#3c4150] rounded-[4px]" onClick={() => slide(i)}>
+                    <button
+                      key={i}
+                      className={`text-[#fafafa] px-4 h-10 text-base font-semibold whitespace-nowrap flex items-center justify-end rounded-[4px] ${currentTab === i ? "bg-[#3c4150]" : ""}`}
+                      onClick={() => {
+                        slide(i), setCurrentTab(i);
+                      }}
+                    >
                       {x.title}
                     </button>
                   ))}
@@ -97,7 +118,7 @@ const Startup = () => {
                 <div key={i} className={"lg:w-full shrink-0 w-[1200px] h-auto"}>
                   <div className="lg:h-auto h-[738px]">
                     <div className="md:px-0 lg:px-10 lg:py-12 lg:flex-col pt-[110px] px-0 flex items-center justify-between">
-                      <div className=" lg:block w-full hidden">
+                      <div className="lg:block w-full hidden mb-5">
                         <Swiper slidesPerView={1}>
                           <SwiperSlide className="bg-transparent">
                             <div className="w-[338px] rounded-[8px] bg-[#1d1d24] ">
@@ -136,7 +157,7 @@ const Startup = () => {
                           <SwiperSlide className="bg-transparent">
                             <div className="w-[338px] rounded-[8px] bg-[#1d1d24] ">
                               <Link href={"/"}>
-                                <div className="h-[258px] rounded-[8px] overflow-hidden relative">
+                                <div className="lg:h-[190px] h-[258px] rounded-[8px] overflow-hidden relative">
                                   <Image src={"https://gimg2.gateimg.com/image/17110354889797765532.jpg?w=1920&q=75"} alt="" width={600} height={600} className="h-full w-full absolute inset-0" />
                                   <div className="h-8 w-full text-semibold opacity-95 bg-[#2f3440] flex items-center justify-center text-green-color1 absolute bottom-0">
                                     <GoClock className="mr-1" />
@@ -149,13 +170,13 @@ const Startup = () => {
                                     <div className="h-6 bg-[#203588] rounded-sm px-2 flex items-center justify-center">Airdrop</div>
                                     <div className="h-6 bg-[#203588] rounded-sm px-2 flex items-center justify-center">İLK OLMAYAN</div>
                                   </div>
-                                  <div className="mb-3 text-2xl font-semibold text-[#fafafa]">Brett</div>
-                                  <div className="py-4 px-3 w-full rounded-[4px] bg-[#14141a]">
-                                    <div className="mb-4 flex items-center font-semibold">
-                                      <span className="text-[28px] text-[#fafafa] font-semibold">118,472</span>
+                                  <div className="lg:text-xl mb-3 text-2xl font-semibold text-[#fafafa]">Brett</div>
+                                  <div className="lg:py-3 lg:px-2 py-4 px-3 w-full rounded-[4px] bg-[#14141a]">
+                                    <div className="lg:mb-2 mb-4 flex items-center font-semibold">
+                                      <span className="lg:text-xl text-[28px] text-[#fafafa] font-semibold">118,472</span>
                                       <span className="text-base text-blue-brand3 ml-1 mb-[3px]">Destekleyenler</span>
                                     </div>
-                                    <div className="mb-2 flex justify-between text-base">
+                                    <div className="lg:flex-col mb-2 flex justify-between text-base">
                                       <div className="flex">
                                         <span className="text-[#fafafa]">234,417,125</span>
                                         <span className="text-blue-brand3">/7000 USDT</span>
@@ -170,7 +191,7 @@ const Startup = () => {
                           <SwiperSlide className="bg-transparent">
                             <div className="w-[338px] rounded-[8px] bg-[#1d1d24] ">
                               <Link href={"/"}>
-                                <div className="h-[258px] rounded-[8px] overflow-hidden relative">
+                                <div className="lg:h-[190px] h-[258px] rounded-[8px] overflow-hidden relative">
                                   <Image src={"https://gimg2.gateimg.com/image/17110354889797765532.jpg?w=1920&q=75"} alt="" width={600} height={600} className="h-full w-full absolute inset-0" />
                                   <div className="h-8 w-full text-semibold opacity-95 bg-[#2f3440] flex items-center justify-center text-green-color1 absolute bottom-0">
                                     <GoClock className="mr-1" />
@@ -183,13 +204,13 @@ const Startup = () => {
                                     <div className="h-6 bg-[#203588] rounded-sm px-2 flex items-center justify-center">Airdrop</div>
                                     <div className="h-6 bg-[#203588] rounded-sm px-2 flex items-center justify-center">İLK OLMAYAN</div>
                                   </div>
-                                  <div className="mb-3 text-2xl font-semibold text-[#fafafa]">Brett</div>
-                                  <div className="py-4 px-3 w-full rounded-[4px] bg-[#14141a]">
-                                    <div className="mb-4 flex items-center font-semibold">
-                                      <span className="text-[28px] text-[#fafafa] font-semibold">118,472</span>
+                                  <div className="lg:text-xl mb-3 text-2xl font-semibold text-[#fafafa]">Brett</div>
+                                  <div className="lg:py-3 lg:px-2 py-4 px-3 w-full rounded-[4px] bg-[#14141a]">
+                                    <div className="lg:mb-2 mb-4 flex items-center font-semibold">
+                                      <span className="lg:text-xl text-[28px] text-[#fafafa] font-semibold">118,472</span>
                                       <span className="text-base text-blue-brand3 ml-1 mb-[3px]">Destekleyenler</span>
                                     </div>
-                                    <div className="mb-2 flex justify-between text-base">
+                                    <div className="lg:flex-col mb-2 flex justify-between text-base">
                                       <div className="flex">
                                         <span className="text-[#fafafa]">234,417,125</span>
                                         <span className="text-blue-brand3">/7000 USDT</span>

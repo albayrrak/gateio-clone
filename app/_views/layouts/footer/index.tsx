@@ -62,7 +62,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h6 className="text-[#fafafa] text-[20px]">Hakkımda</h6>
+            <h6 className="text-[#fafafa] text-[20px]">ürünler</h6>
             <div className="flex flex-col mt-4 gap-3">
               <Link href={"/"} className="text-blue-brand3 text-[14px] hover:text-blue-brand1">
                 Hakkımızda
@@ -100,7 +100,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h6 className="text-[#fafafa] text-[20px]">Hakkımda</h6>
+            <h6 className="text-[#fafafa] text-[20px]">Hizmetler</h6>
             <div className="flex flex-col mt-4 gap-3">
               <Link href={"/"} className="text-blue-brand3 text-[14px] hover:text-blue-brand1">
                 Hakkımızda
@@ -138,7 +138,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h6 className="text-[#fafafa] text-[20px]">Hakkımda</h6>
+            <h6 className="text-[#fafafa] text-[20px]">Anlar</h6>
             <div className="flex flex-col mt-4 gap-3">
               <Link href={"/"} className="text-blue-brand3 text-[14px] hover:text-blue-brand1">
                 Hakkımızda
@@ -176,7 +176,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h6 className="text-[#fafafa] text-[20px]">Hakkımda</h6>
+            <h6 className="text-[#fafafa] text-[20px]">Finans</h6>
             <div className="flex flex-col mt-4 gap-3">
               <Link href={"/"} className="text-blue-brand3 text-[14px] hover:text-blue-brand1">
                 Hakkımızda
