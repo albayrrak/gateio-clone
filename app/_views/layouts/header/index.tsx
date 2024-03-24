@@ -190,7 +190,7 @@ const Header = () => {
           <GiHamburgerMenu className="text-2xl text-white hover:text-blue-brand1" />
         </div>
       </div>
-      <div className={`${menu ? "opacity-100 z-50" : "-z-10  opacity-0"} fixed top-0 left-0 h-screen w-full bg-neutral-900/90`}>
+      <div className={`${menu ? "opacity-100 z-50" : "-z-10 opacity-0 pointer-events-none"} fixed top-0 left-0 h-screen w-full bg-neutral-900/90`}>
         <div className={`${isChecked ? "bg-[#1b1d22]" : "bg-white"} ${menu ? "translate-x-[0]" : "translate-x-[414px]"} flex flex-col absolute right-0  w-[414px] h-full transition-all`}>
           <div className="flex items-center justify-between px-[22px] py-4">
             <Link href={"/"} className="w-[122px] h-[28px] ">

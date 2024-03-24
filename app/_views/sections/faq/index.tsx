@@ -21,7 +21,7 @@ const Faq = () => {
             <AuthButton title="Yardım ve Destek" buttonBg="secondary" buttonType="small" />
           </div>
         </div>
-        <div className="lg:grid-cols-1 grid grid-cols-2 gap-6">
+        <div className="lg:grid-cols-1 items-start grid grid-cols-2 gap-6">
           {FaqData.map((x, i) => {
             return <Accordion key={i} title={x.title} answer={x.desc} open={i === openIndex} setOpen={() => handleAccordionClick(i)} />;
           })}
