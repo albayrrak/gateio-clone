@@ -15,17 +15,19 @@ const Faq = () => {
   return (
     <section className="w-full">
       <Container>
-        <div className="flex justify-between mt-[120px] mb-8 items-center">
+        <div className="md:mt-20 flex justify-between mt-[120px] mb-8 items-center">
           <SectionTitle title="Gate.io hakkında SSS" />
-          <AuthButton title="Yardım ve Destek" buttonBg="secondary" buttonType="small" />
+          <div>
+            <AuthButton title="Yardım ve Destek" buttonBg="secondary" buttonType="small" />
+          </div>
         </div>
-        <div className="grid-faq">
+        <div className="lg:grid-cols-1 grid grid-cols-2 gap-6">
           {FaqData.map((x, i) => {
             return <Accordion key={i} title={x.title} answer={x.desc} open={i === openIndex} setOpen={() => handleAccordionClick(i)} />;
           })}
         </div>
-        <div style={{ padding: "120px 195px 80px" }}>
-          <h1 className="text-center text-[40px] font-semibold">1700'den fazla kripto para birimini alıp satan tek kripto borsası</h1>
+        <div className="lg:pt-16 lg:px-5 lg:pb-6 2xl:px-[78px] pt-[120px] px-[195px] pb-20">
+          <h1 className="lg:text-2xl 2xl:text-[40px] text-center text-[48px] font-bold leading-normal">1700'den fazla kripto para birimini alıp satan tek kripto borsası</h1>
         </div>
       </Container>
     </section>

@@ -15,13 +15,13 @@ export default function Home() {
       <Main />
       <CryptoToday />
       <Event />
-      {/* <Start />
-      <Startup />
+      <Start />
+      {/* <Startup /> */}
       <Crypto />
       <Community />
       <News />
       <CryptoSeller />
-      <Faq /> */}
+      <Faq />
     </>
   );
 }

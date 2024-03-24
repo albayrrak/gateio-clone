@@ -7,10 +7,10 @@ const Crypto = () => {
   return (
     <section className="w-full">
       <Container>
-        <div className="w-full mb-8 mt-[120px]">
+        <div className="lg:mt-20 lg:mb-6 w-full mb-8 mt-[120px]">
           <SectionTitle title="Kripto Yaşam Tarzı" />
         </div>
-        <div className="flex gap-6 items-start">
+        <div className="lg:flex-col flex gap-6 items-start">
           <CryptoCard />
           <CryptoCard />
           <CryptoCard />

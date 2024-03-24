@@ -12,7 +12,7 @@ const Start = () => {
         <div className="w-full font-arial mt-[35px] mb-8">
           <SectionTitle title="Nasıl Başlanır" />
         </div>
-        <div className="flex gap-6">
+        <div className="lg:flex-col flex gap-6">
           <StartCard
             title="01. Hesap Oluştur"
             description="Kaydolun ve başlangıç görevlerini tamamlayın, $6666 kadar kazanın"
@@ -20,16 +20,16 @@ const Start = () => {
             onClick={() => {
               console.log("hesap");
             }}
-            icon={<UserRoundCheck className="w-12 h-12" />}
+            icon={<UserRoundCheck className="lg:text-[72px] lg:mr-6 w-12 h-12" />}
           />
           <StartCard
             title="02. Hesabınıza Para Yatırın"
             description="Kripto yatırım yolculuğunuza başlamak için hesabınıza para ekleyin."
             buttonText="Kripto Para Yatır"
             alternativeButtonText="Kripto Al"
-            icon={<WalletCards className="w-12 h-12" />}
+            icon={<WalletCards className="lg:text-[72px] lg:mr-6 w-12 h-12" />}
           />
-          <StartCard title="03. Alım Satıma Başlayın" description="Kripto para alın, satın, alım satım kopyalayın ve daha fazlasını keşfedin" buttonText="Al-Sat" icon={<Lightbulb className="w-12 h-12" />} />
+          <StartCard title="03. Alım Satıma Başlayın" description="Kripto para alın, satın, alım satım kopyalayın ve daha fazlasını keşfedin" buttonText="Al-Sat" icon={<Lightbulb className="lg:text-[72px] lg:mr-6 w-12 h-12" />} />
         </div>
       </Container>
     </section>

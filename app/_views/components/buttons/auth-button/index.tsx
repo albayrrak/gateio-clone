@@ -12,7 +12,7 @@ const AuthButton: React.FC<AuthButtonProps> = ({ title, action, buttonType, butt
   return (
     <button
       className={
-        "flex items-center text-sm px-3 rounded-[4px] font-semibold " +
+        "lg:w-full flex items-center justify-center text-sm px-3 rounded-[4px] font-semibold text-nowrap w-full " +
         (buttonBg === "primary" ? " bg-blue-brand1 text-white " : "") +
         (buttonBg === "secondary" ? "bg-neutral-color1 text-black-primary hover:text-blue-brand1 " : "") +
         (buttonType === "register" ? " bg-blue-brand1 py-[6px] rounded-[5px] text-white " : "") +

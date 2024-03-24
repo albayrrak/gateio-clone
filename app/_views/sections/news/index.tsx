@@ -7,10 +7,10 @@ const News = () => {
   return (
     <section className="w-full">
       <Container>
-        <div className="mt-[120px] mb-8 w-full">
+        <div className="md:mt-20 mt-[120px] mb-8 w-full">
           <SectionTitle title="Basında Biz" />
         </div>
-        <div className="flex justify-between gap-6">
+        <div className="lg:flex-col flex justify-between gap-6">
           <NewsCard
             title="Crypto Exchange Gate.io to Help Busan, South Korea, Build Blockchain Infrastructure"
             description="The firm joins Binance, Huobi and FTX in inking paperwork with the city as it develops its nascent crypto market. Crypto exchange Gate.io signed a memorandum of understanding (MoU) on Wednesday with the South Korean city of Busan to help develop blockchain infrastructure in the city."

@@ -6,8 +6,10 @@ const MainForm = () => {
   return (
     <form className="flex items-center flex-wrap w-full gap-3">
       <div className="xl:w-full flex justify-between rounded-[4px] border-[1px] border-white bg-[#ebedf2] hover:border-[1px] hover:border-blue-brand1 group">
-        <input type="text" className="h-12 px-3 text-black-primary text-sm rounded-[4px] bg-transparent outline-none group-hover:bg-white" placeholder="E-posta veya Telefon" />
-        <AuthButton title="Hesap Oluştur" buttonType="register" />
+        <input type="text" className="w-full h-12 px-3 text-black-primary text-sm rounded-[4px] bg-transparent outline-none group-hover:bg-white" placeholder="E-posta veya Telefon" />
+        <div className="flex">
+          <AuthButton title="Hesap Oluştur" buttonType="register" />
+        </div>
       </div>
       <div className="hidden lg:flex items-center w-full">
         <div className="h-[1px] flex-1 bg-black-divider"></div>

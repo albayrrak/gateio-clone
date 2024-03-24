@@ -27,7 +27,9 @@ const Event = () => {
       <Container>
         <div className="flex justify-between items-center mt-20 mb-8">
           <SectionTitle title="Etkinlikler" />
-          <AuthButton title="Daha Fazla Etkinlik" buttonBg="secondary" buttonType="small" />
+          <div>
+            <AuthButton title="Daha Fazla Etkinlik" buttonBg="secondary" buttonType="small" />
+          </div>
         </div>
         <div className="h-[240px] relative">
           <EventSlider swiperRef={swiperRef} />

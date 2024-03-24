@@ -16,7 +16,7 @@ const EventSlider: React.FC<IProps> = ({ swiperRef }) => {
       ref={swiperRef}
       spaceBetween={24}
       className="h-[240px] relative"
-      slidesPerView={4}
+      slidesPerView={1}
       loop
       autoplay={{
         delay: 1000,
@@ -25,6 +25,16 @@ const EventSlider: React.FC<IProps> = ({ swiperRef }) => {
       pagination={{
         el: ".swiper-pagination",
         clickable: true,
+      }}
+      breakpoints={{
+        992: {
+          // width: 768,
+          slidesPerView: 4,
+        },
+
+        540: {
+          slidesPerView: 2,
+        },
       }}
     >
       {SlideData.map((x, i) => (

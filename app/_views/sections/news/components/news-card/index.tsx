@@ -11,8 +11,8 @@ interface IProps {
 
 const NewsCard: React.FC<IProps> = ({ title, description, image, logoImage }) => {
   return (
-    <Link href="/" className="w-1/3 overflow-hidden transition rounded-[8px] border border-black-divider hover:shadow-md flex flex-col ">
-      <div className="w-full h-[214px] relative">
+    <Link href="/" className="md:flex-col lg:w-full lg:flex-row w-1/3 overflow-hidden transition rounded-[8px] border border-black-divider hover:shadow-md flex flex-col">
+      <div className="md:w-full md:rounded-none lg:w-[304px] lg:rounded-[8px] w-full h-[214px] relative overflow-hidden">
         <Image src={image} alt="" className="w-full h-full object-cover" width={600} height={600} />
       </div>
       <div className="p-6 flex flex-col flex-1 justify-between">
