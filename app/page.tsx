@@ -16,7 +16,7 @@ export default function Home() {
       <CryptoToday />
       <Event />
       <Start />
-      {/* <Startup /> */}
+      <Startup />
       <Crypto />
       <Community />
       <News />

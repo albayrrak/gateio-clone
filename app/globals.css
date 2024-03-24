@@ -91,4 +91,32 @@
   .coin-table:last-child {
     @apply md:hidden;
   }
+
+  .scroll-button-left {
+    background: linear-gradient(to left, rgba(26, 28, 35, 0), rgb(26, 28, 35) 25%);
+  }
+
+  .scroll-button-right {
+    background: linear-gradient(to right, rgba(26, 28, 35, 0), rgb(26, 28, 35) 25%);
+  }
+
+  .swiper .swiper-slide-shadow {
+    display: none;
+  }
+
+  .startup-section {
+    position: relative;
+  }
+  .startup-section::before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    filter: blur(100px);
+    right: 30%;
+    top: 30%;
+    background: linear-gradient(90deg, rgb(0, 252, 189), rgb(204, 21, 126));
+    filter: blur(140px);
+    top: 40%;
+  }
 }

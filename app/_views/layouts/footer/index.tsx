@@ -1,12 +1,28 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Container from "../../components/container";
+import FooterAccordion from "./accordion";
 
 const Footer = () => {
+  const footerData = [
+    {
+      href: "/hakkımda",
+      name: "Hakkımızda",
+    },
+    {
+      href: "/kariyer",
+      name: "Kariyer",
+    },
+    {
+      href: "/privacy",
+      name: "Kullanıcı Sözleşmesi",
+    },
+  ];
+
   return (
     <footer className="bg-black-header">
       <Container>
-        <div className="py-[52px]  grid-footer">
+        <div className="md:hidden py-[52px] grid-footer">
           <div>
             <h6 className="text-[#fafafa] text-[20px]">Hakkımda</h6>
             <div className="flex flex-col mt-4 gap-3">
@@ -197,6 +213,15 @@ const Footer = () => {
               </Link>
             </div>
           </div>
+        </div>
+        <div className="py-[52px]">
+          <FooterAccordion title="Hakkımda" data={footerData} />
+          <FooterAccordion title="Ürünler" data={footerData} />
+          <FooterAccordion title="Hizmetler" data={footerData} />
+          <FooterAccordion title="Kurumsal" data={footerData} />
+          <FooterAccordion title="Anlar" data={footerData} />
+          <FooterAccordion title="Learn" data={footerData} />
+          <FooterAccordion title="Finans" data={footerData} />
         </div>
       </Container>
     </footer>

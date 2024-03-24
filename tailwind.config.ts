@@ -13,6 +13,7 @@ const config: Config = {
           line: "rgb(112, 121, 140)",
           divider: "#eef1fa",
           divider2: "#e9ebf0",
+          gradient: "linear-gradient(to left, rgba(26, 28, 35, 0), rgb(26, 28, 35) 25%)",
         },
 
         blue: {
@@ -22,6 +23,7 @@ const config: Config = {
         },
 
         green: {
+          color1: "#17e5a1",
           color2: "#1bb273",
         },
 

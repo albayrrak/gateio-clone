@@ -27,8 +27,8 @@ const Community = () => {
     <section className="w-full mt-4">
       <Container>
         <div className="md:flex-col flex flex-wrap justify-between items-center rounded-[8px] p-10 bg-card-color1 border border-black-divider">
-          <div className="relative w-full flex">
-            <Swiper ref={swiperRef} className="lg:w-[722px] w-[730px]" slidesPerView={1} spaceBetween={24} loop>
+          <div className="relative md:w-full flex">
+            <Swiper ref={swiperRef} className="lg:w-[722px] w-[730px]" slidesPerView={1} spaceBetween={24} loop breakpoints={{ 768: { slidesPerView: 2 } }}>
               <SwiperSlide>
                 <div className="md:min-h-[328px] h-[328px] min-h-full bg-white flex flex-col items-center py-9 px-6 rounded-[8px]">
                   <div className="md:min-h-20 w-20 h-20 overflow-hidden rounded-full flex items-center justify-center">
