@@ -30,7 +30,7 @@ const MainSlider = () => {
   };
 
   return (
-    <div className="w-[587px] h-[616px]  font-arial flex relative">
+    <div className="lg:hidden w-[587px] h-[616px] font-arial flex relative flex-shrink-0">
       <Swiper
         modules={[Autoplay]}
         ref={swiperRef}

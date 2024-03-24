@@ -18,15 +18,15 @@ const Main = () => {
     <section className="w-full">
       <Container>
         <div className="flex items-center justify-between">
-          <div className="pt-[120px] w-[565px] min-h-[100px]  flex flex-col items-center">
-            <h1 className="text-title font-bold leading-title mb-2 w-full font-arial">Kriptoya Açılan Kapı</h1>
-            <p className="text-description break-words font-arial font-medium">Güvenli, hızlı ve kolay bir şekilde 1.700’den fazla kripto paraya yatırım yapın</p>
-            <div className="my-[26px] text-blue-brand3 flex items-center justify-start w-full">
-              <Gift size={16} />
-              <span className="ml-2 text-sm">Kaydolun ve 6666$'a varan hoş geldin ödülleri kazanın</span>
+          <div className="lg:pt-8 lg:w-full xl:w-[340px] xl:pt-[145px] pt-[120px] w-[565px] min-h-[100px]  flex flex-col items-start">
+            <h1 className="2xl:text-[48px] lg:text-[28px] font-bold mb-2 w-full text-[52px]">Kriptoya Açılan Kapı</h1>
+            <p className="2xl:text-base text-[20px] break-words font-medium">Güvenli, hızlı ve kolay bir şekilde 1.700’den fazla kripto paraya yatırım yapın</p>
+            <div className="lg:my-4 my-[26px] text-blue-brand3 flex items-center justify-start w-full">
+              <Gift size={25} />
+              <span className="ml-2 2xl:text-base text-[20px]">Kaydolun ve 6666$'a varan hoş geldin ödülleri kazanın</span>
             </div>
             <MainForm />
-            <div className="w-full mt-20 flex items-center justify-between gap-[17px]">
+            <div className="lg:flex-nowrap xl:mt-5 xl:flex-wrap w-full mt-20 flex items-center justify-between gap-[17px]">
               {VolumeData.map((x) => (
                 <MainVolume key={x.id} title={x.title} subTitle={x.subTitle} titleIcon={x.titleIcon} />
               ))}
@@ -34,7 +34,8 @@ const Main = () => {
           </div>
           <MainSlider />
         </div>
-        <div className="flex items-center px-6 bg-card-color1 border border-black-divider rounded-[8px] h-14 ">
+        {/* TODO AÇILACAK */}
+        {/* <div className="flex items-center px-6 bg-card-color1 border border-black-divider rounded-[8px] h-14 ">
           <div className="flex items-center w-full">
             <BiMessageRoundedDots fontSize={24} />
             <Swiper
@@ -96,7 +97,7 @@ const Main = () => {
             </Swiper>
             <GiHamburgerMenu fontSize={24} className="ml-4" />
           </div>
-        </div>
+        </div> */}
       </Container>
     </section>
   );

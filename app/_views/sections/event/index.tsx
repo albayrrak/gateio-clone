@@ -31,13 +31,14 @@ const Event = () => {
         </div>
         <div className="h-[240px] relative">
           <EventSlider swiperRef={swiperRef} />
-          <div className="absolute top-[26%] -right-4 swiper-button-next z-10 ">
+          <div className="lg:block swiper-pagination hidden"></div>
+          <div className="lg:hidden block absolute top-[26%] -right-4  z-10 ">
             <button className="bg-[#f2f3f7] w-8 h-8 flex items-center justify-center group rounded-[4px]" onClick={handleNextSlide}>
               <ChevronRight className="group-hover:text-blue-brand1" />
             </button>
           </div>
 
-          <div className="absolute top-[26%] -left-4 swiper-button-prev z-10">
+          <div className="lg:hidden block absolute top-[26%] -left-4  z-10">
             <button className="bg-[#f2f3f7] w-8 h-8 flex items-center justify-center group rounded-[4px]" onClick={handlePrevSlide}>
               <ChevronLeft className="group-hover:text-blue-brand1" />
             </button>

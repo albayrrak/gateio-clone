@@ -1,0 +1,72 @@
+{
+  "titles": [
+    {
+      "title": "Coin"
+    },
+    {
+      "title": "Fiyatı"
+    },
+    {
+      "title": "24S İşlem Hacmi"
+    },
+    {
+      "title": "24S İşlem Hacmi"
+    }
+  ],
+  "children": [
+    {
+      "icon": "https://www.gate.io/images/coin_icon/64/gt.png?w=32&q=75",
+      "title": "GT",
+      "subTitle": "Gate Token",
+      "price": "$7.68",
+      "volume": "10.33M",
+      "change": "+11.97%",
+      "buttonTitle": "Al-sat"
+    },
+    {
+      "icon": "https://www.gate.io/images/coin_icon/64/nada.png?w=32&q=75",
+      "title": "NADA",
+      "subTitle": "NADA Protocol Token",
+      "price": "$0.02532",
+      "volume": "183.74M",
+      "change": "183.74M",
+      "buttonTitle": "Al-sat"
+    },
+    {
+      "icon": "https://www.gate.io/images/coin_icon/64/btc.png?w=32&q=75",
+      "title": "BTC",
+      "subTitle": "BITCOIN",
+      "price": "$64977.00",
+      "volume": "127.39M",
+      "change": "+2.12%",
+      "buttonTitle": "Al-sat"
+    },
+    {
+      "icon": "https://www.gate.io/images/coin_icon/64/eth.png?w=32&q=75",
+      "title": "ETH",
+      "subTitle": "ETHEREUM",
+      "price": "$3391.17",
+      "volume": "91.61M",
+      "change": "+2.21%",
+      "buttonTitle": "Al-sat"
+    },
+    {
+      "icon": "https://www.gate.io/images/coin_icon/64/slerf.png?w=32&q=75",
+      "title": "SLERF",
+      "subTitle": "Slerf",
+      "price": "$0.01427",
+      "volume": "68.11M",
+      "change": "-3.86%",
+      "buttonTitle": "Al-sat"
+    },
+    {
+      "icon": "https://www.gate.io/images/coin_icon/64/bome.png?w=32&q=75",
+      "title": "BOME",
+      "subTitle": "BOOK OF MEME",
+      "price": "$0.01423",
+      "volume": "68.11M",
+      "change": "-0.59%",
+      "buttonTitle": "Al-sat"
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import Faq from "./_views/sections/faq";
 import Main from "./_views/sections/main";
 import News from "./_views/sections/news";
 import Start from "./_views/sections/start";
+import Startup from "./_views/sections/startup";
 
 export default function Home() {
   return (
@@ -14,12 +15,13 @@ export default function Home() {
       <Main />
       <CryptoToday />
       <Event />
-      <Start />
+      {/* <Start />
+      <Startup />
       <Crypto />
       <Community />
       <News />
       <CryptoSeller />
-      <Faq />
+      <Faq /> */}
     </>
   );
 }

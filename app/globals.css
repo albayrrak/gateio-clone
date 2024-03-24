@@ -29,6 +29,7 @@
 
   .grid-faq {
     display: grid;
+    align-items: flex-start;
     gap: 24px;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -37,5 +38,57 @@
     display: grid;
     grid-template-columns: repeat(5, minmax(auto, 1fr));
     gap: 48px 24px;
+  }
+
+  .scroll-bar::-webkit-scrollbar {
+    width: 4px;
+    /* width of the entire scrollbar */
+    height: 4px;
+  }
+
+  .scroll-bar::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    /* Background Blur */
+    backdrop-filter: blur(10px);
+  }
+
+  .scroll-bar::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #acb2bf;
+    /* Background Blur */
+    backdrop-filter: blur(10px);
+  }
+
+  .coin-table:first-child {
+    padding-left: 24px;
+  }
+
+  .coin-table:first-child th:not(:first-child) {
+    border: 1px solid red;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .swiper-pagination {
+    bottom: -50px !important;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: #acb2bf;
+    border-radius: inherit;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 8px;
+    height: 8px;
+    background: #262933;
+    border-radius: inherit;
+  }
+
+  .coin-table:last-child {
+    @apply md:hidden;
   }
 }
