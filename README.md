@@ -11,6 +11,6 @@ Proje Kurulum aşaması.
 Yukarıdaki işlemleri yaptıktan sonra default olarak browser'ınızda [http://localhost:3000] 3000 portunda açılacaktır.
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Learn More
+## Metmask bağlantısı
 
 Metamask connection eklenmiştir. Metamask iconuna tıklayarak Metamaskınızı bağlayabilirsiniz.
