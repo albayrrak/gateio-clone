@@ -20,10 +20,10 @@ const Main = () => {
         <div className="flex items-center justify-between">
           <div className="lg:pt-8 lg:w-full xl:w-[340px] xl:pt-[145px] pt-[120px] w-[565px] min-h-[100px]  flex flex-col items-start">
             <h1 className="2xl:text-[48px] lg:text-[28px] font-bold mb-2 w-full text-[52px]">Kriptoya Açılan Kapı</h1>
-            <p className="2xl:text-base text-[20px] break-words font-medium">Güvenli, hızlı ve kolay bir şekilde 1.700’den fazla kripto paraya yatırım yapın</p>
+            <p className="2xl:text-base text-[20px] break-words font-medium">Güvenli, hızlı ve kolay bir şekilde 1.700&apos;den fazla kripto paraya yatırım yapın</p>
             <div className="lg:my-4 my-[26px] text-blue-brand3 flex items-center justify-start w-full">
               <Gift size={25} />
-              <span className="ml-2 2xl:text-base text-[20px]">Kaydolun ve 6666$'a varan hoş geldin ödülleri kazanın</span>
+              <span className="ml-2 2xl:text-base text-[20px]">Kaydolun ve 6666$&apos;a varan hoş geldin ödülleri kazanın</span>
             </div>
             <MainForm />
             <div className="lg:flex-nowrap xl:mt-5 xl:flex-wrap w-full mt-20 flex items-center justify-between gap-[17px]">

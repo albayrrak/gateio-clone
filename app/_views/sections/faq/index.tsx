@@ -27,7 +27,7 @@ const Faq = () => {
           })}
         </div>
         <div className="lg:pt-16 lg:px-5 lg:pb-6 2xl:px-[78px] pt-[120px] px-[195px] pb-20">
-          <h1 className="lg:text-2xl 2xl:text-[40px] text-center text-[48px] font-bold leading-normal">1700'den fazla kripto para birimini alıp satan tek kripto borsası</h1>
+          <h1 className="lg:text-2xl 2xl:text-[40px] text-center text-[48px] font-bold leading-normal">1700&apos;den fazla kripto para birimini alıp satan tek kripto borsası</h1>
         </div>
       </Container>
     </section>

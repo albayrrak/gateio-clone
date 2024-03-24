@@ -71,7 +71,7 @@ const Startup = () => {
               <div ref={containerRef} className="rounded-[4px] flex h-full w-full overflow-x-auto no-scrollbar  scroll-smooth">
                 <div className="flex flex-row justify-start relative p-1 bg-[#20232b]">
                   {TabData.map((x, i) => (
-                    <button className="text-[#fafafa] px-4 h-10 text-base font-semibold whitespace-nowrap flex items-center justify-end bg-[#3c4150] rounded-[4px]" onClick={() => slide(i)}>
+                    <button key={i} className="text-[#fafafa] px-4 h-10 text-base font-semibold whitespace-nowrap flex items-center justify-end bg-[#3c4150] rounded-[4px]" onClick={() => slide(i)}>
                       {x.title}
                     </button>
                   ))}
@@ -93,8 +93,8 @@ const Startup = () => {
           </div>
           <div className="flex w-full relative overflow-hidden startup-section">
             <div className="w-full flex transition" style={{ transform: `translateX(-${currentSlide}px)` }}>
-              {Array.from([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], (x) => (
-                <div className={"lg:w-full shrink-0 w-[1200px] h-auto"}>
+              {Array.from([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], (x, i) => (
+                <div key={i} className={"lg:w-full shrink-0 w-[1200px] h-auto"}>
                   <div className="lg:h-auto h-[738px]">
                     <div className="md:px-0 lg:px-10 lg:py-12 lg:flex-col pt-[110px] px-0 flex items-center justify-between">
                       <div className=" lg:block w-full hidden">
@@ -205,7 +205,7 @@ const Startup = () => {
                       </div>
                       <div className="lg:w-full xl:w-[256px] w-[464px] flex flex-col items-start ">
                         <h2 className="lg:text-2xl lg:mb-6 mb-8 text-[40px] break-words font-semibold text-white">Startup</h2>
-                        <p className="text-xl text-blue-brand3">Yeni kripto projeleri için launchpad.Gate Startup aracılığıyla kripto airdrop'larını en erken alan siz olunp</p>
+                        <p className="text-xl text-blue-brand3">Yeni kripto projeleri için launchpad.Gate Startup aracılığıyla kripto airdrop&apos;larını en erken alan siz olunp</p>
                         <div className="mt-8 w-full p-4 bg-[#1d1d24] rounded-[8px] ">
                           <div className="font-semibold mb-4 text-[#eff5ff]">ATH YATIRIM GETİRİSİ</div>
                           <div className="flex flex-wrap gap-y-4 gap-x-12 ">

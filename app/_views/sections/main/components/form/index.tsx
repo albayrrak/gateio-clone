@@ -16,7 +16,7 @@ const MainForm = () => {
         <div className="px-[14px] text-sm text-neutral-color2">OR</div>
         <div className="h-[1px] flex-1 bg-black-divider"></div>
       </div>
-      <div className="xl:w-full flex gap-3 ">
+      <div className="xl:w-full flex gap-3">
         <SocialButton icon={require("@/app/_assets/Google__G__logo.svg.png")} action={() => console.log("google")} />
         <SocialButton icon={require("@/app/_assets/Apple_logo_black.svg.png")} action={() => console.log("google")} />
         <SocialButton icon={require("@/app/_assets/MetaMask_Fox.svg.png")} action={() => console.log("google")} />
